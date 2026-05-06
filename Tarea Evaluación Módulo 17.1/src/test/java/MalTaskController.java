@@ -1,6 +1,5 @@
 // ======================================================================
 //  LEGACY TEST – MAL HECHO
-//  (Este es el archivo que mostrarás como "ANTES")
 // ======================================================================
 
 import org.junit.jupiter.api.Test;
@@ -12,7 +11,7 @@ public class MalTaskControllerTest {
 
         MalTaskController controller = new MalTaskController();
 
-        // SMELL – demasiados parámetros, sin objetos
+        // SMELL controller with too many parameters
         controller.processTask(
                 "Fix bug",
                 3,
