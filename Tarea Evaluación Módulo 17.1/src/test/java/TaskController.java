@@ -58,7 +58,7 @@ public class TaskController {
 
     public String saveTaskLegacy(String title, String description, String type) {
 
-        // VALIDATION DUPLICADA
+        // Duplicate instance
         if (title == null || title.isEmpty()) {
             return "Error: title required";
         }
@@ -66,13 +66,13 @@ public class TaskController {
             return "Error: description required";
         }
 
-        // LÓGICA MEZCLADA
+        // Mixed logic
         LegacyTask task = new LegacyTask();
         task.title = title;
         task.description = description;
         task.type = type;
 
-        // MÁS VALIDACIÓN DUPLICADA
+        // Even more duplicate instances
         if (title.length() > 50) {
             return "Error: title too long";
         }
@@ -84,10 +84,10 @@ public class TaskController {
         int priority = legacyService.calculatePriority(type);
         task.priority = priority;
 
-        // SHOTGUN SURGERY: notificación mezclada
+        // SHOTGUN SURGERY: Mixed notifications
         System.out.println("Email sent to user");
 
-        // GUARDAR
+        // Save
         legacyService.save(task);
 
         return "OK";
