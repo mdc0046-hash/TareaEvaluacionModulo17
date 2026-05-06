@@ -12,16 +12,13 @@ better way of writting the code.
 
 ## 📁 Repository Structure
 
-src/
-├── main/
-│    └── java/
-│         ├── MalTaskController.java      ← Legacy version (with 10 code smells)
-│         └── TaskController.java         ← Clean refactored version
-│
-└── test/
-└── java/
-├── MalTaskControllerTest.java  ← Legacy test (bad practices)
-└── TaskControllerTest.java     ← Clean Selenium-based test
+📁 src  
+ ├── 📂 main/java  
+ │     ├── ❌ MalTaskController.java  
+ │     └── ✅ TaskController.java  
+ └── 📂 test/java  
+       ├── ❌ MalTaskControllerTest.java  
+       └── ✅ TaskControllerTest.java  
 
 
 Additional files:
